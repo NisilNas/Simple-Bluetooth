@@ -6,9 +6,9 @@
 #define CLOCK_PIN 5
 CRGB leds[NUM_LEDS];
 
-//int Red_LED_Pin = 9; // PWM Pin for Red LED
+//int Red_LED_Pin = 9;    // PWM Pin for Red LED
 //int Green_LED_Pin = 10; // PWM Pin for Green LED
-//int Blue_LED_Pin = 11; // PWM Pin for Blue LED
+//int Blue_LED_Pin = 11;  // PWM Pin for Blue LED
 
 //Varibles to hold brightness values ranging from 0 (off) to 255 (fully on)
 int Red_value=0;
@@ -36,9 +36,9 @@ void loop() {
   //Process any info coming from the bluetooth serial link
   if (Serial.available()){
     BluetoothData=Serial.read(); //Get next character from bluetooth
-    if(BluetoothData=='R') Red_value=Serial.parseInt(); //Read Red value
+    if(BluetoothData=='R') Red_value=Serial.parseInt();   //Read Red value
     if(BluetoothData=='G') Green_value=Serial.parseInt(); //Read Green Value
-    if(BluetoothData=='B') Blue_value=Serial.parseInt(); //Read Blue Value
+    if(BluetoothData=='B') Blue_value=Serial.parseInt();  //Read Blue Value
     if(BluetoothData=='D') Delay_value=Serial.parseInt(); //Read Blue Value
     
   }
